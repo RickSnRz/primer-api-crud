@@ -1,0 +1,32 @@
+.shining-text {
+    animation: shine 2s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      text-shadow: 0 0 10px #ffff, 0 0 20px #ffff, 0 0 30px #ffff;
+    }
+    50% {
+      text-shadow: 0 0 20px #ffff, 0 0 30px #ffff, 0 0 40px #ffff;
+    }
+    100% {
+      text-shadow: 0 0 10px #ffff, 0 0 20px #ffff, 0 0 30px #ffff;
+    }
+  }
+  
+  @keyframes borderPulse {
+    0% {
+      border-color: #000;
+    }
+    50% {
+      border-color: #fff;
+    }
+    100% {
+      border-color: #000;
+    }
+  }
+  
+  .animated-div {
+    border: 2px solid #000;
+    animation: borderPulse 2s infinite;
+  }
