@@ -41,7 +41,8 @@ const deleteCliente = async (id) => {
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Correo</th>
-            <th>fechaRegistro</th>
+            <th>Telefono</th>
+            <th>FechaRegistro</th>
             <th colSpan="3">Action</th>
           </tr>
         </thead>
@@ -58,6 +59,7 @@ const deleteCliente = async (id) => {
                 <td>{cliente.nombre}</td>
                 <td>{cliente.apellido}</td>
                 <td>{cliente.correo}</td>
+                <td>{cliente.telefono}</td>
                 <td>{cliente.fechaRegistro}</td>
                 <td className="mx-2">
                   <Link

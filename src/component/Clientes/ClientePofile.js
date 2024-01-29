@@ -11,6 +11,7 @@ const ClientePofile = () => {
     nombre: "",
     apellido: "",
     correo: "",
+    telefono: "",
     fechaRegistro: "",
   });
 
@@ -92,6 +93,17 @@ const ClientePofile = () => {
 
                   <div className="col-sm-9">
                     <p className="text-muted mb-0">{cliente.correo}</p>
+                  </div>
+                </div>
+                <hr />
+
+                <div className="row">
+                  <div className="col-sm-3">
+                    <h5 className="mb-0">Telefono</h5>
+                  </div>
+
+                  <div className="col-sm-9">
+                    <p className="text-muted mb-0">{cliente.telefono}</p>
                   </div>
                 </div>
                 <hr />

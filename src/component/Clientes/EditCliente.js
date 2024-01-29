@@ -11,9 +11,10 @@ const EditCliente = () => {
       nombre: "",
       apellido: "",
       correo: "",
+      telefono: "",
       fechaRegistro: "",
     });
-    const { nombre, apellido, correo, fechaRegistro } = cliente;
+    const { nombre, apellido, correo, telefono, fechaRegistro } = cliente;
 
     useEffect(() => {
       obtenerCliente();
@@ -83,6 +84,18 @@ const EditCliente = () => {
           required
           value={correo}
           onChange={(e) => handleInputChange(e)}/>
+        </div>
+        <div className="input-group mb-5">
+          <label htmlFor="telefono" className="input-group-text">
+            Phone
+          </label>
+          <input type="text"
+            className="form-control col-sm-6"
+            id="telefono"
+            name='telefono'
+            required
+            value={telefono}
+            onChange={(e) => handleInputChange(e)}/>
         </div>
         <div className="input-group mb-5">
           <label htmlFor="fechaRegistro" className="input-group-text">
