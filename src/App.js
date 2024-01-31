@@ -8,33 +8,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddClientes from "./component/Clientes/AddClientes";
 import EditCliente from "./component/Clientes/EditCliente";
 import ClientePofile from "./component/Clientes/ClientePofile";
+import Login from "./component/Usuarios/Login";
 
 function App() {
   return (
-    <main>
-      <Router>
-      <NavBar />
+    <main id="App">
+      <Router>  
         <Routes>
-          <Route 
-          exact
-          path="/" 
-          element={<Home />} />
-          <Route 
-          exact
-          path="/view-clients" 
-          element={<ClientesView />} />
-          <Route 
-          exact
-          path="/add-cliente" 
-          element={<AddClientes />} />
-          <Route 
-          exact
-          path="/edit-cliente/:id" 
-          element={<EditCliente />} />
-          <Route 
-          exact
-          path="/cliente-perfil/:id" 
-          element={<ClientePofile />} />
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/home" element={<><NavBar /><Home /></>} />
+          <Route exact path="/view-clients" element={<><NavBar /><ClientesView /></>} />
+          <Route exact path="/add-cliente" element={<><NavBar /><AddClientes /></>} />
+          <Route exact path="/edit-cliente/:id" element={<><NavBar /><EditCliente /></>} />
+          <Route exact path="/cliente-perfil/:id" element={<><NavBar /><ClientePofile /></>} />
         </Routes>
       </Router>
     </main>
